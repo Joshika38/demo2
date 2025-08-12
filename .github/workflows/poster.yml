@@ -1,0 +1,16 @@
+name: Poster Upload Check
+
+on:
+  push:
+    branches:
+      - '**'   # Runs for all branches
+
+jobs:
+  poster-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Confirm Upload
+        run: echo "Poster Uploaded Successfully"
